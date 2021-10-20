@@ -8,7 +8,7 @@ const returnLastTwoDrivers = function (drivers) {
     return drivers.slice(-2);
 }
 
-const selectingDrivers = [returnFirstTwoDrivers(), returnLastTwoDrivers()];
+const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
 
 //Doesn't pass???
 
@@ -18,14 +18,12 @@ function createFareMultiplier(fare) {
     }
 }
 
-const farex2 = function fareDoubler() {
-    return createFareMultiplier(2);
-}
+const fareDoubler = createFareMultiplier(2);
 
 const farex3 = function fareTripler() {
     return createFareMultiplier(3);
 }
 
-const selectDifferentDrivers = function([drivers], otherDrivers) {
+const selectDifferentDrivers = function(drivers, otherDrivers) {
     return otherDrivers(drivers);
 }
